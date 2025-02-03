@@ -1,26 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Pet Shop</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Bem-vindo ao Meu Pet Shop!</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Nossos Produtos</h2>
-            <p>Encontre tudo que seu pet precisa!</p>
-            <button id="btnSaudacao">Clique aqui para uma saudação!</button>
-            <p id="saudacao"></p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Meu Pet Shop. Todos os direitos reservados.</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+document.getElementById('btnSaudacao').addEventListener('click', function() {
+    document.getElementById('saudacao').innerText = 'Olá, amante dos pets! Obrigado por visitar nosso site!';
+});
+
+document.getElementById('btnWhatsApp').addEventListener('click', function() {
+    const mensagem = encodeURIComponent("Olá, gostaria de fazer um pedido!");
+    const numeroWhatsApp = "5516992320582";
+    const urlWhatsApp = https://wa.me/${numeroWhatsApp}?text=${mensagem};
+    window.open(urlWhatsApp, '_blank');
+});
