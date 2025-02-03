@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop - Agendamentos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao [DUDU PET SHOP]</h1>
+        <p>Agende o banho e tosa do seu pet!</p>
+    </header>
+    
+    <main>
+        <h2>Agende Seu Horário</h2>
+        <form id="agendamentoForm">
+            <label for="nome">Nome do Tutor:</label>
+            <input type="text" id="nome" required>
+
+            <label for="petNome">Nome do Pet:</label>
+            <input type="text" id="petNome" required>
+
+            <label for="data">Data:</label>
+            <input type="date" id="data" required>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" required>
+
+            <button type="submit">Agendar</button>
+        </form>
+        <div id="mensagem"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
