@@ -1,10 +1,90 @@
-document.getElementById('btnSaudacao').addEventListener('click', function() {
-    document.getElementById('saudacao').innerText = 'Olá, amante dos pets! Obrigado por visitar nosso site!';
-});
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-document.getElementById('btnWhatsApp').addEventListener('click', function() {
-    const mensagem = encodeURIComponent("Olá, gostaria de fazer um pedido!");
-    const numeroWhatsApp = "5516992320582";
-    const urlWhatsApp = https://wa.me/${numeroWhatsApp}?text=${mensagem};
-    window.open(urlWhatsApp, '_blank');
-});
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUDU PET SHOP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-menu">
+        <div class="logo">
+            <span class="logo-1">DUDU</span>
+            <span class="logo-2">PET SHOP</span>
+            <h1 class="titulo">BEM VINDO AO DUDU PET SHOP</h1>
+        </div>
+
+        <nav class="menu">
+            <a href="#" onclick="location.reload()"> INICIO </a>
+            <a href="#" onclick="alert('BEM-VINDO AO DUDU PET SHOP! TODOS OS DIREITOS RESERVADOS.');">SOBRE</a>
+            <a href="#" onclick="alert('SERVIÇOS: Banho e Tosa e muitos outros SERVIÇOS Premium')">SERVIÇOS</a>
+            <a href="https://wa.me/5516992320582" target="_blank">CONTATO</a>
+        </nav>
+    </div>
+
+    <section>
+        <div class="container-conteudo">
+            <div class="texto">
+                <p class="subtitulo">Aqui, seu pet é tratado com todo o carinho e atenção que ele merece.</p>
+                <p>Com amor e dedicação, cuido do seu amigo de quatro patas como se fosse meu. Estou sempre atento às
+                    suas necessidades.</p>
+                <p>Meu compromisso é garantir que seu pet se sinta amado e confortável durante todo o tempo que passar
+                    comigo.</p>
+            </div>
+            <img src="./imgs/animal-1838876_1280.jpg" alt="imagem do pet" class="imagem">
+        </div>
+    </section>
+
+    <div class="container-conteudo">
+        <img src="./imgs/cute-4432051_1280.jpg" alt="imagem do pet">
+        <div class="conteudo-contato">
+            <h2>CONTATO</h2>
+            <p>TUDO COM MUITO AMOR E CARINHO</p>
+            <p>Cuidamos de seus cachorros como se fosse nosso</p>
+            <div>
+                <form class="formulario" id="contactForm" onsubmit="sendWhatsApp(event)">
+                    <div class="input">
+                        <label>NOME</label>
+                        <input type="text" id="name" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="input">
+                        <label for="telefone">WHATSAPP</label>
+                        <input type="text" id="telefone" placeholder="(xx) X XXXX-XXXX" required>
+                    </div>
+                    <div class="input">
+                        <label for="email">E-MAIL</label>
+                        <input type="email" id="email" placeholder="nome@gmail.com" required>
+                    </div>
+                    <div class="input">
+                        <label for="assunto">ASSUNTO</label>
+                        <textarea name="assunto" id="assunto" cols="30" rows="10" required></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function sendWhatsApp(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // Coleta os valores dos campos
+            const name = document.getElementById('name').value;
+            const telefone = document.getElementById('telefone').value;
+            const email = document.getElementById('email').value;
+            const assunto = document.getElementById('assunto').value;
+
+            // Formata a mensagem
+            const message = Nome: ${ name }% 0AWhatsApp: ${ telefone }% 0AEmail: ${ email }% 0AAssunto: ${ assunto };
+            const whatsappLink = https://wa.me/5516992320582?text=${message}; // Substitua pelo seu número
+
+                // Redireciona para o WhatsApp
+                window.open(whatsappLink, '_blank');
+        }
+    </script>
+</body>
+
+</html>
