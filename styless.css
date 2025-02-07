@@ -1,28 +1,87 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
-    background-color: #007bff;
-    color: white;
+.container-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: aqua;
+}
+
+.menu > a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 18px; /* Aumentado para facilitar a leitura */
+}
+
+.logo > .logo-1,
+.logo > .logo-2 {
+    color: black;
+}
+
+.titulo {
+    font-size: 36px; /* Aumentado para facilitar a leitura */
+    font-weight: 900;
+}
+
+.container-conteudo {
+    display: flex;
+    align-items: center; /* Alinha verticalmente no centro */
     padding: 20px;
-    text-align: center;
 }
 
-main {
-    padding: 20px;
+.texto {
+    max-width: 50%; /* Ajuste conforme necessário */
+    margin-right: 20px; /* Espaço entre texto e imagem */
 }
 
-footer {
-    text-align: center;
+.texto p {
+    font-size: 24px; /* Aumentado para facilitar a leitura */
+    font-weight: 700;
+    margin-bottom: 10px; /* Espaço entre os parágrafos */
+}
+
+.container-conteudo > img {
+    max-width: 400px; /* Ajuste conforme necessário */
+    height: auto; /* Para manter a proporção da imagem */
+}
+
+.conteudo-contato h2 {
+    font-size: 30px; /* Aumentado para facilitar a leitura */
+}
+
+.conteudo-contato p {
+    font-size: 24px; /* Aumentado para facilitar a leitura */
+}
+
+.formulario .input {
+    margin-top: 10px;
+}
+
+.formulario .input label {
+    font-size: 20px; /* Aumentado para facilitar a leitura */
+}
+
+.formulario .input input,
+.formulario .input textarea {
+    font-size: 18px; /* Aumentado para facilitar a leitura */
     padding: 10px;
-    background-color: #007bff;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+}
+
+button {
+    font-size: 18px; /* Aumentado para facilitar a leitura */
+    padding: 10px 15px;
+}
+
+/* Seção de rodapé (footer) */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    margin-top: 20px;
 }
